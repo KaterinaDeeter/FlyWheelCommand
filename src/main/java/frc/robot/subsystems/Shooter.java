@@ -28,7 +28,7 @@ public class Shooter extends SubsystemBase {
     // This method will be called once per scheduler run
   }
   public void ShooterRun(){ //Function created to run the motor-- referenced later in ShooterRun.java
-    m_shooterMotor.set(0.9);
+    m_shooterMotor.set(1);
     //m_shooterMotorBB.setSpeed(1);
   }
   public void ShooterStop(){

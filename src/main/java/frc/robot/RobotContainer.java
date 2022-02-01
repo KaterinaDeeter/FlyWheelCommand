@@ -52,7 +52,7 @@ public class RobotContainer
     joystickShooter = new Joystick(Constants.kJoystickShooterChannel); //Sets shooter joystick to port 1
 
  //Shooter Relevant---
-    shooterMotor = new CANSparkMax(Constants.kShooterChannel, MotorType.kBrushless); 
+    shooterMotor = new CANSparkMax(Constants.kShooterChannel, MotorType.kBrushed); 
     shooterMotor.setInverted(true);
     shooter = new Shooter(); //Defines the subsystem
     shooterBallRelease = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, Constants.kShooterGateForwardChannel, Constants.kShooterGateReleaseChannel);
@@ -69,10 +69,9 @@ public class RobotContainer
     //Shooter Button Configured and Command Assigned to Button
     shooterButton = new JoystickButton(joystickShooter, Constants.shooterButtonNumber); 
     shooterButton.whileHeld(new ParallelCommandGroup( //This is meant to run both the shooter and the release gate commands
-      new ShooterRun(shooter),
-      new ReleaseGate(shooter))); //References the command and inside the needed subsytem
+      new ReleaseGate(shooter),  
+      new ShooterRun(shooter))); //References the command and inside the needed subsytem
     
-
   }
 
   public Command getAutonomousCommand() 
