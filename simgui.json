@@ -1,0 +1,22 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Drive": "Subsystem",
+      "/LiveWindow/Drive/Mecanum Drive 1": "MecanumDrive",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/SmartDashboard/Auto Mode": "String Chooser",
+      "/SmartDashboard/Autonomous Command": "Command",
+      "/SmartDashboard/Drive": "Subsystem",
+      "/SmartDashboard/DriveJoystick": "Command"
+    }
+  },
+  "NetworkTables": {
+    "LiveWindow": {
+      "Drive": {
+        "open": true
+      },
+      "open": true
+    }
+  }
+}
